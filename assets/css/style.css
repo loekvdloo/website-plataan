@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    display: flex;
+    height: 133px;
+    width: 100vw;
+    background-color: #84A07C;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.formulier{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 30px;
+}
