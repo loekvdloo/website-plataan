@@ -2,15 +2,89 @@
     margin: 0px;
     padding: 0px;
 }
+
+h1{
+    color: white;
+    font-size: 48px;
+}
+h2{
+    color: white;
+    font-size: 32px;
+}
+h3{
+    color: white;
+    font-size: 20px;
+}
 header{
     display: flex;
+    align-items: center;
     height: 133px;
     width: 100vw;
     background-color: #84A07C;
 }
-
-
-
+.logoplataantekst{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 65%;
+}
+header nav{
+    display: flex;
+    gap: 56px;
+}
+header a{
+    color: white;
+    text-decoration: none;
+}
+nav a{
+    color: white;
+    font-size: 32px;
+    text-decoration: none;
+}
+footer{
+display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 208px;
+    background-color: #84A07C;
+}
+.mediafooter{
+    display: flex;
+    gap: 29px;
+    flex-direction: column;
+    position: relative;
+    width: 85%;
+    left: 50px;
+}
+.media{
+    display: flex;
+    width: 32px;
+}
+.mediatekst{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.mediatekst a{
+    color: white;
+    text-decoration: none;
+}
+#di{
+    position: relative;
+    left: 10px;
+}
+#wo{
+    position: relative;
+    left: 2px;
+}
+#do{
+    position: relative;
+    left: 5px;
+}
+#we{
+    position: relative;
+    left: 7px;
+}
 
 
 
