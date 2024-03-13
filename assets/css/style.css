@@ -1,124 +1,230 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-h1{
+h1 {
     color: white;
     font-size: 48px;
 }
-h2{
+
+h2 {
     color: white;
     font-size: 32px;
 }
-h3{
+
+h3 {
     color: white;
     font-size: 20px;
 }
-header{
+
+/*hieronder staat de code van de header. het zorgt ervoor dat alles in het midden staat. ook zorgt het der voor dat het logo en de naam van het bedrijf links staan en het menu, bestellen en over ons rechts staan.*/
+header {
     display: flex;
     align-items: center;
     height: 133px;
     width: 100vw;
     background-color: #84A07C;
 }
-.logoplataantekst{
+
+.logoplataantekst {
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 65%;
+    width: 60%;
+
 }
-header nav{
+
+header nav {
     display: flex;
     gap: 56px;
 }
-header a{
+
+
+header a {
     color: white;
     text-decoration: none;
 }
-nav a{
+
+nav a {
     color: white;
     font-size: 32px;
     text-decoration: none;
 }
-footer{
-display: flex;
+
+main {
+    background-color: #3F4739;
+}
+
+.homepagina {
+    display: flex;
+    align-items: center;
+}
+.afbeblok{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.homepage-img {
+    display: flex;
+    justify-content: end;
+    width: 50vw;
+
+}
+
+/*oefen*/
+
+.tab {
+    overflow: hidden;
+    background-color: #5E7556;
+    position: relative;
+    left: 58px;
+    width: 244px;
+    top: 16px;
+    border-radius: 10px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 30px;
+    transition: 0.3s;
+    font-size: 17px;
+    padding-top: 6px;
+    padding-bottom: 25px;
+}
+
+.tab button:hover {
+    background-color: #ddd;
+}
+
+.tab button.active {
+    background-color: #84A07C;
+}
+
+.tabcontent {
+    display: none;
+    position: relative;
+    left: 58px;
+    border-radius: 10px;
+    height: 215px;
+    width: 443px;
+    background-color: #84A07C;
+}
+
+.tabcontent h3 {
+    position: relative;
+    left: 29px;
+    top: 35px;
+}
+
+.tabcontent a {
+    position: relative;
+    left: 29px;
+    top: 107px;
+    color: black;
+    font-size: 15px;
+}
+
+/*einde oefenen*/
+/*afhaal en bezorg blok*/
+
+#invulhome {
+    height: 20px;
+    width: 110px;
+    position: relative;
+    left: 29px;
+    top: 40px;
+    padding: 5px;
+}
+
+#bestellenhome {
+    height: 33px;
+    width: 120px;
+    position: relative;
+    left: 29px;
+    top: 40px;
+    color: white;
+    background-color: black;
+}
+
+/*hieronder staat alle code voor de footer. zo zorgt het er voor dat de socale media links staat met hun naam der achter en de openings tijden rechts*/
+
+footer {
+    display: flex;
     align-items: center;
     width: 100vw;
     height: 208px;
     background-color: #84A07C;
+    color: white;
 }
-.mediafooter{
+
+.mediafooter {
     display: flex;
     gap: 29px;
     flex-direction: column;
     position: relative;
-    width: 85%;
+    width: 80%;
     left: 50px;
 }
-.media{
+
+.media {
     display: flex;
     width: 32px;
 }
-.mediatekst{
+
+.mediatekst {
     display: flex;
     align-items: center;
     gap: 24px;
 }
-.mediatekst a{
+
+.mediatekst a {
     color: white;
     text-decoration: none;
 }
-#di{
+.livedatum{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 30px;
+    align-self: end;
+    bottom: 24px;
+}
+#liveclock{
+    display: flex;
+    gap: 5px;
+}
+#di {
     position: relative;
     left: 10px;
 }
-#wo{
+
+#wo {
     position: relative;
     left: 2px;
 }
-#do{
+
+#do {
     position: relative;
     left: 5px;
 }
-#we{
+
+#we {
     position: relative;
     left: 7px;
 }
 
 
+/*dit is voor het testen*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.formulier{
+.formulier {
     display: flex;
     flex-direction: column;
     width: 300px;
-    margin-bottom: 30px;
 }

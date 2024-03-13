@@ -1,54 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>plataan</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
+</head><?php
+include('header.php')
+?>
+
 <body>
-<header>
-    <div class="logoplataantekst">
-   <a href="index.php"><img src="assets/img/coollogo_com-15727867.png" alt="logoplataan" id="logoplataan"></a>
-        <h1><a href="index.php">Plataan</a></h1>
-    </div>
-<nav>
-    <a href="menu.php">menu</a>
-    <a href="bestellen.php">bestellen</a>
-    <a href="overons.php">over ons</a>
-
-</nav>
-</header>
 <main>
-<a>odashfasljdfsdlkjkl;fdofhndifshdfh</a>
-</main>
-<footer>
-    <div class="mediafooter">
-        <div class="mediatekst">
-            <img src="assets/img/instagram(1).png" alt="insta" class="media">
-            <a target="_blank" href="https://www.instagram.com/deplataanmook/" >@deplataanmook</a>
+    <section class="homepagina">
+        <div class="afbeblok">
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">afhalen</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')">bezorgen</button>
+
+            </div>
+
+            <div id="London" class="tabcontent">
+                <form>
+                    <h3>selecteer een tijd:</h3>
+                    <input type="time" name="afhaaltijd" placeholder="afhaaltijd" id="invulhome">
+                    <input type="submit"  value="bestellen" id="bestellenhome">
+                </form>
+                <a href="menu.php">menu kaart bekijken</a>
+            </div>
+
+            <div id="Paris" class="tabcontent">
+                <form>
+                    <h3>Vul je postcode in:</h3>
+                    <input type="text" name="postcode" placeholder="postcode" id="invulhome">
+                    <input type="submit" value="bestellen " id="bestellenhome">
+                </form>
+                <a href="menu.php">menu kaart bekijken</a>
+            </div>
         </div>
-        <div class="mediatekst">
-            <img src="assets/img/facebook(1).png" alt="facebook" class="media">
-            <a target="_blank" href="https://www.facebook.com/restariadeplataan.mook/?locale=nl_NL">@Restaria De Plataan Mook </a>
-        </div>
-        <div class="mediatekst">
-            <img src="assets/img/phone-call.png" alt="telefoon" class="media">
-            <a>024 696 2097</a>
-        </div>
-    </div>
-        <div class="openingstijden">
-            <h3>ma:  gesloten</h3>
-            <h3>di: <span id="di"> gesloten</span></h3>
-            <h3>wo:  <span id="wo">12:00-21:00</span></h3>
-            <h3>do:  <span id="do">12:00-21:00</span></h3>
-            <h3>vr:  <span id="we">12:00-21:00</span></h3>
-            <h3>za:  <span id="we">12:00-21:00</span></h3>
-            <h3>zo:  <span id="we">13:00-21:00</span> </h3>
+        <div class="homepage-img">
+            <img src="assets/img/plataan-homepagina.png" alt="voorkantplataan" id="voorkantplataan">
         </div>
 
-</footer>
+        <script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+    </section>
+</main>
+<?php
+include('footer.php')
+?>
 </body>
 </html>
+<!--<div class="homepage-img">-->
+<!--    <img src="assets/img/plataan-homepagina.png" alt="voorkantplataan" id="voorkantplataan">-->
+<!--</div>-->
+<!--</html>-->
+<!--<main>-->
+
+<!--        <div class="bestellenhome">-->
+<!--            <div class="afbe">-->
+<!--                <div class="bezorgenhome" id="afhalen" onclick="switchToAfhalen(this)">-->
+<!--                    <h3>afhalen</h3>-->
+<!--                </div>-->
+<!--                <div class="bezorgenhome" id="bezorgen" onclick="switchToBezorgen(this)">-->
+<!--                    <h3>bezorgen</h3>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="grootblokhome" id="bezorgscherm">-->
+<!--                <form>-->
+<!--                    <h3>Vul je postcode in:</h3>-->
+<!--                    <input type="text" name="postcode" placeholder="postcode" id="invulhome">-->
+<!--                    <input type="submit" value="bestellen " id="bestellenhome" onclick="changeColor(this)">-->
+<!--                </form>-->
+<!--                <a>menu kaart bekijken</a>-->
+<!--            </div>-->
+<!--            <div class="grootblokhome" id="afhaalscherm">-->
+<!--                <form>-->
+<!--                    <h3>Vul je postcode in:</h3>-->
+<!--                    <input type="text" name="afhaaltijd" placeholder="afhaaltijd" id="invulhome">-->
+<!--                          <input type="submit" value="bestellen" id="bestellenhome" onclick="changeColor(this)">-->
+<!--                </form>-->
+<!--                <a href="menu.php">menu kaart bekijken</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="afbepgainga">-->
 
 
 
