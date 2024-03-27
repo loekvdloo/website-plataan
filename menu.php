@@ -9,13 +9,59 @@
 <?php
 include('header.php')
 ?>
-<main>
-    <form class="formulier" action="rekenmachine.php" method="post">
-        <input type="text" name="getal1" placeholder="vul hier je eerste getal in">
-        <a>x</a>
-        <input type="text" name="getal2" placeholder="vul hier je tweede getal in in">
-        <input type="submit" value="bereken">
+<main class="menupagina">
+    <?php
+    include('loginscherm.php')
+    ?>
+    <?php
+    include('getgerechten.php')
+    ?>
+    <section class="balkmenu">
+        <a>Friet</a>
+        <a>Snacks</a>
+        <a>Broodjes</a>
+        <a>Menu's</a>
+        <a>Salades</a>
+        <a>Ijs & Shakes</a>
+        <a>Sauzen</a>
+        <a>Dranken</a>
+        <a id="knopbestellen"> Jouw bestelling</a>
+        <img src="assets/img/cart%201.png">
 
+
+    </section>
+    <div class="menu">
+    <section class="frietformulier">
+        <?php
+        foreach ($result as $key => $value) {
+            echo '<div class="frietgerechten frietkeuzes' . $key . '">';
+            foreach ($value as $key1 => $value2) {
+
+                if ($key1 == 'Productnaam') {
+                    echo '<h1>' . $value2 . '</h1>';
+
+                } elseif ($key1 == 'Omschrijving') {
+
+                    echo '<h3>' . $value2 . '</h3>';
+                } elseif ($key1 == 'Prijs') {
+
+                    echo '<h4>' . $value2 . '</h4>';
+                } elseif ($key1 == 'img') {
+
+                    echo '<h4>' . ($value2) . '</h4>';
+                }
+
+
+            }
+            echo '</div>';
+        }
+
+        ?>
+    </section>
+    <section class="winkelmandje">
+<div class="bestellingsmandje"></div>
+    </section>
+    </div>
 </main>
 <?php
 include('footer.php')

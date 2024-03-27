@@ -7,7 +7,8 @@
         <a href="menu.php">menu</a>
         <a href="bestellen.php">bestellen</a>
         <a href="overons.php">over ons</a>
-        <a href="overons.php">login</a>
+        <button class="afwe" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+
 
     </nav>
 </header>
