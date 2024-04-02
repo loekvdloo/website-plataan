@@ -16,7 +16,7 @@ include('header.php')
     <?php
     include('getgerechten.php')
     ?>
-    <section class="balkmenu">
+    <section class="balkmenu" id="balkmenu">
         <a>Friet</a>
         <a>Snacks</a>
         <a>Broodjes</a>
@@ -31,38 +31,70 @@ include('header.php')
 
     </section>
     <div class="menu">
-    <section class="frietformulier">
-        <?php
-        foreach ($result as $key => $value) {
-            echo '<div class="frietgerechten frietkeuzes' . $key . '">';
-            foreach ($value as $key1 => $value2) {
+        <section class="frietformulier">
+            <?php
+            foreach ($result as $key => $value) {
+                echo '<div class="frietgerechten frietkeuzes' . $key . '">';
 
-                if ($key1 == 'Productnaam') {
-                    echo '<h1>' . $value2 . '</h1>';
+                foreach ($value as $key1 => $value2) {
 
-                } elseif ($key1 == 'Omschrijving') {
+                    if ($key1 == 'Productnaam') {
+                        echo '<h2>' . $value2 . '</h2>';
 
-                    echo '<h3>' . $value2 . '</h3>';
-                } elseif ($key1 == 'Prijs') {
+                    } elseif ($key1 == 'Omschrijving') {
 
-                    echo '<h4>' . $value2 . '</h4>';
-                } elseif ($key1 == 'img') {
+                        echo '<h4>' . $value2 . '</h4>';
+                    } elseif ($key1 == 'Id') {
+                        echo '<img src="assets/img/plus.png" onclick="fucntie(' . $value2 . ')" id="addorder' . $value2 . '">';
+                    } elseif ($key1 == 'Prijs') {
 
-                    echo '<h4>' . ($value2) . '</h4>';
+                        echo '<h4 id="waarde">' . $value2 . '</h4>';
+                    } elseif ($key1 == 'img') {
+
+                        echo '<img class="frietimg" src="' . $value2 . '"/>';
+                    }
+
+
                 }
 
-
+                echo '</div>';
             }
-            echo '</div>';
-        }
 
-        ?>
-    </section>
-    <section class="winkelmandje">
-<div class="bestellingsmandje"></div>
-    </section>
+            ?>
+        </section>
+        <script>
+            window.addEventListener("scroll", () => {
+                let winkelmandje = document.getElementById("winkelmandje");
+                let header = document.querySelector("header");
+
+                if (window.pageYOffset >= header.offsetHeight) {
+                    winkelmandje.classList.add("bewegenmandje");
+                } else {
+                    winkelmandje.classList.remove("bewegenmandje");
+                }
+            });
+
+        </script>
+        <section class="winkelmandje" id="winkelmandje">
+            <div class="bestellingsmandje"></div>
+        </section>
+
     </div>
 </main>
+<script>
+    window.addEventListener("scroll", () => {
+        let balkmenu = document.getElementById("balkmenu");
+        let header = document.querySelector("header");
+
+        if (window.pageYOffset >= header.offsetHeight) {
+            balkmenu.classList.add("sticky");
+        } else {
+            balkmenu.classList.remove("sticky");
+        }
+    });
+
+</script>
+
 <?php
 include('footer.php')
 ?>

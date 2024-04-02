@@ -316,6 +316,9 @@ span.psw {
 
 /*einde login*/
 /*nav balk menu*/
+.menupagina {
+    height: 1500px;
+}
 
 .balkmenu {
     display: flex;
@@ -341,17 +344,26 @@ span.psw {
     left: 565px;
 }
 
-/*vakken eten*/
-.menu {
-    display: flex;
+.balkmenu a:hover {
+    background: #ddd;
+    color: black;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+/*vakken eten*/
 .frietformulier {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 50px;
     width: 65%;
+    float: left;
 }
 
 .frietgerechten {
@@ -362,22 +374,70 @@ span.psw {
     border-radius: 10px;
 }
 
+.frietgerechten h2, h4 {
+    top: 10px;
+    color: white;
+    position: relative;
+    left: 15px;
+}
+
+#waarde {
+    position: relative;
+    top: 31px;
+}
+
+.frietkeuzes6 h4 {
+    display: flex;
+    gap: -10px;
+    width: 230px;
+}
+
+.frietkeuzes6 img {
+    position: relative;
+    left: 273.5px;
+    top: -90.5px;
+}
+
+.frietimg {
+    position: relative;
+    left: 273.5px;
+    top: -72.5px;
+}
+
 /*einde vakken eten*/
 /*winkelmandje*/
 .winkelmandje {
+    float: left;
     width: 35%;
     height: 100vw;
     display: flex;
     justify-content: end;
+    z-index: 999;
+    transition: top 0.3s;
 }
-.bestellingsmandje{
-    overflow: hidden;
-    position: fixed;
-    top: 0;
+
+.bestellingsmandje {
     width: 331px;
     height: 660px;
     background-color: white;
 }
+
+
+.bewegenmandje {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    z-index: 999;
+}
+
+.bestellingsmandje {
+    width: 331px;
+    height: 660px;
+    background-color: white;
+}
+
 
 /*einde winkelmandje*/
 /*hieronder staat alle code voor de footer. zo zorgt het er voor dat de socale media links staat met hun naam der achter en de openings tijden rechts*/
