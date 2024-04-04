@@ -14,17 +14,23 @@ include('header.php')
     include('loginscherm.php')
     ?>
     <?php
-    include('getgerechten.php')
+    include('Connection.php');
+
+
+    $sql = "SELECT * FROM mainproduct";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll();
     ?>
     <section class="balkmenu" id="balkmenu">
-        <a>Friet</a>
-        <a>Snacks</a>
-        <a>Broodjes</a>
-        <a>Menu's</a>
-        <a>Salades</a>
-        <a>Ijs & Shakes</a>
-        <a>Sauzen</a>
-        <a>Dranken</a>
+        <a href="menufriet.php">Friet</a>
+        <a href="menusnacks.php">Snacks</a>
+        <a href="menubroodjes.php">Broodjes</a>
+        <a href="menumenu's.php">Menu's</a>
+        <a href="menusalades.php">Salades</a>
+        <a href="menuijs.php">Ijs & Shakes</a>
+        <a href="menusauzen.php">Sauzen</a>
+        <a href="menudranken.php">Dranken</a>
         <a id="knopbestellen"> Jouw bestelling</a>
         <img src="assets/img/cart%201.png">
 
@@ -38,20 +44,15 @@ include('header.php')
 
                 foreach ($value as $key1 => $value2) {
 
-                    if ($key1 == 'Productnaam') {
+                    if ($key1 == 'product') {
                         echo '<h2>' . $value2 . '</h2>';
+                        echo '<div class="bekijken bekijk' . $key . '">';
+                        echo '<a id="bekijkknop">Bekijk =></a>';
+                        echo '</div>';
 
-                    } elseif ($key1 == 'Omschrijving') {
-
-                        echo '<h4>' . $value2 . '</h4>';
-                    } elseif ($key1 == 'Id') {
-                        echo '<img src="assets/img/plus.png" onclick="fucntie(' . $value2 . ')" id="addorder' . $value2 . '">';
-                    } elseif ($key1 == 'Prijs') {
-
-                        echo '<h4 id="waarde">' . $value2 . '</h4>';
                     } elseif ($key1 == 'img') {
 
-                        echo '<img class="frietimg" src="' . $value2 . '"/>';
+                        echo '<img class="menuimg" src="' . $value2 . '"/>';
                     }
 
 

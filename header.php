@@ -4,10 +4,11 @@
         <h1><a href="index.php">Plataan</a></h1>
     </div>
     <nav>
-        <a href="menu.php">menu</a>
+        <a href="menualgemeen.php">menu</a>
         <a href="bestellen.php">bestellen</a>
-        <a href="overons.php">over ons</a>
-        <button class="afwe" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+        <a href="admin.php">over ons</a>
+        <button class="afwe" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login
+        </button>
 
 
     </nav>

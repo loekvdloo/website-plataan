@@ -15,9 +15,9 @@
 
             <button type="submit">Login</button>
             <div class="signin">
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
 
                 <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Sign Up
                 </button>
@@ -47,7 +47,8 @@
     }
 </script>
 <div id="id01" class="modal">
-    <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <span onclick="document.getElementById('id02').style.display='none'" class="close"
+          title="Close Modal">&times;</span>
     <form class="modal-content" action="/action_page.php">
         <div class="container">
             <h1>Sign Up</h1>
@@ -69,7 +70,9 @@
             <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
 
             <div class="clearfix">
-                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">
+                    Cancel
+                </button>
                 <button type="submit" class="signupbtn">Sign Up</button>
             </div>
         </div>
@@ -81,7 +84,7 @@
     var modal = document.getElementById('id02');
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }

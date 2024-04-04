@@ -332,6 +332,8 @@ span.psw {
 .balkmenu a {
     margin-left: 30px;
     font-size: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 .balkmenu img {
@@ -355,8 +357,31 @@ span.psw {
     width: 100%;
     z-index: 999;
 }
-
+/*einde menubalk*/
 /*vakken eten*/
+.menuimg{
+    position: relative;
+    left: 273.5px;
+    top: -65.5px;
+}
+.bekijken{
+    width: 67px;
+    height: 30px;
+    background-color: black;
+    position: relative;
+    left: 16px;
+    top: 39px;
+    border-radius: 10px;
+}
+.bekijken a {
+    color: white;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 6px;
+}
 .frietformulier {
     display: flex;
     flex-wrap: wrap;
@@ -386,17 +411,7 @@ span.psw {
     top: 31px;
 }
 
-.frietkeuzes6 h4 {
-    display: flex;
-    gap: -10px;
-    width: 230px;
-}
 
-.frietkeuzes6 img {
-    position: relative;
-    left: 273.5px;
-    top: -90.5px;
-}
 
 .frietimg {
     position: relative;
@@ -440,6 +455,32 @@ span.psw {
 
 
 /*einde winkelmandje*/
+/*admin pagina*/
+.toevoegenkop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.toevoegen{
+    display: flex;
+    flex-direction: column;
+}
+#opslaantoevoegen{
+    width: 50px;
+    display: flex;
+    align-self: end;
+}
+
+ #invultoevoeg{
+     display: flex;
+    width: 200px;
+     height: 30px;
+     border-radius: 10px;
+}
+ #teksttoevoegen{
+     padding-right: 20px;
+ }
+/*einde admin pagina*/
 /*hieronder staat alle code voor de footer. zo zorgt het er voor dat de socale media links staat met hun naam der achter en de openings tijden rechts*/
 footer {
     display: flex;

@@ -27,7 +27,7 @@ include('header.php')
                     <input type="time" name="afhaaltijd" placeholder="afhaaltijd" id="invulafhaal">
                     <input type="submit" value="bestellen -->" id="bestellenhome">
                 </form>
-                <a href="menu.php">menu kaart bekijken</a>
+                <a href="menualgemeen.php">menu kaart bekijken</a>
             </div>
             <div id="Paris" class="tabcontent">
                 <form>
@@ -35,7 +35,7 @@ include('header.php')
                     <input type="text" name="postcode" placeholder="postcode" id="invulbestellen">
                     <input type="submit" value="bestellen --> " id="bestellenhome">
                 </form>
-                <a href="menu.php">menu kaart bekijken</a>
+                <a href="menualgemeen.php">menu kaart bekijken</a>
             </div>
         </div>
         <div class="homepage-img">
