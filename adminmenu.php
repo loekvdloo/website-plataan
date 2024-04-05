@@ -41,13 +41,11 @@ include('loginscherm.php')
 
                     echo '<img class="frietimg" src="' . $value2 . '"/>';
                 } elseif ($key1 == 'Id') {
-                    echo '<input type="hidden" name="id" value="'.$value2 .'" hidden>';
 
+                    echo '<input type="hidden" name="id" value="'.$value2 .'" hidden>';
                 }
 
-
             }
-
             echo '<input type="submit" value="verwijder">';
             echo '</form>';
             echo '</div>';
@@ -58,7 +56,6 @@ include('loginscherm.php')
     <section class="frietformulier">
         <?php
         include('Connection.php');
-
 
         $sql = "SELECT * FROM producten WHERE categorie = 'snacks' ";
         $stmt = $conn->prepare($sql);
@@ -85,9 +82,7 @@ include('loginscherm.php')
                     echo '<img class="frietimg" src="' . $value2 . '"/>';
                 }
 
-
             }
-
             echo '</div>';
         }
 

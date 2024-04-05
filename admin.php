@@ -13,7 +13,7 @@ include('header.php')
 <body>
 <main>
     <section class="toevoegenkop">
-    <h1>Product toevoegen</h1>
+        <h1>Product toevoegen</h1>
         <form class="toevoegen" action="databasecalls/createproduct.php" method="post">
             <div class="toevoegenknop">
                 <label id="teksttoevoegen">Productnaam:</label>
@@ -50,14 +50,13 @@ include('header.php')
     <?php
     include('Connection.php');
 
-
     $sql = "SELECT * FROM producten ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll();
 
-   echo '<section class="toevoegenkop">';
-    echo'<h1>Product aanpassen</h1>';
+    echo '<section class="toevoegenkop">';
+    echo '<h1>Product aanpassen</h1>';
     foreach ($result as $key => $value) {
         echo '<form class="toevoegen"  action="databasecalls/updateproduct.php" method="post">';
 
@@ -77,14 +76,11 @@ include('header.php')
                 echo '<input id="invultoevoeg" type="text" name="omschrijving" value="' . $value2 . '"><br>';
             }
 
-
         }
         echo '<input type="submit" id="opslaantoevoegen" value="opslaan">';
-
         echo '</form>';
     }
     echo '</section>';
-
 
     ?>
 </main>

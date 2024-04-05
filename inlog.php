@@ -1,10 +1,8 @@
 <?php
 
-
 global $conn;
 include 'Connection.php';
 
-echo "hoi";
 $user = $_GET['gebruikersnaam'];
 $pass = $_GET['wachtwoord'];
 

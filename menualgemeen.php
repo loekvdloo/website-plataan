@@ -22,22 +22,7 @@ include('header.php')
     $stmt->execute();
     $result = $stmt->fetchAll();
     ?>
-    <section class="balkmenu" id="balkmenu">
-        <a href="menufriet.php">Friet</a>
-        <a href="menusnacks.php">Snacks</a>
-        <a href="menubroodjes.php">Broodjes</a>
-        <a href="menumenu's.php">Menu's</a>
-        <a href="menusalades.php">Salades</a>
-        <a href="menuijs.php">Ijs & Shakes</a>
-        <a href="menusauzen.php">Sauzen</a>
-        <a href="menudranken.php">Dranken</a>
-        <a id="knopbestellen"> Jouw bestelling</a>
-        <img src="assets/img/cart%201.png">
-
-
-    </section>
-    <div class="menu">
-        <section class="frietformulier">
+        <section class="frietformulier1">
             <?php
             foreach ($result as $key => $value) {
                 echo '<div class="frietgerechten frietkeuzes' . $key . '">';
@@ -47,13 +32,14 @@ include('header.php')
                     if ($key1 == 'product') {
                         echo '<h2>' . $value2 . '</h2>';
                         echo '<div class="bekijken bekijk' . $key . '">';
-                        echo '<a id="bekijkknop">Bekijk =></a>';
+                        echo '<a href="menu' . $value2 . '.php" id="bekijkknop">Bekijk =></a>';
                         echo '</div>';
 
                     } elseif ($key1 == 'img') {
 
                         echo '<img class="menuimg" src="' . $value2 . '"/>';
                     }
+
 
 
                 }
@@ -63,39 +49,7 @@ include('header.php')
 
             ?>
         </section>
-        <script>
-            window.addEventListener("scroll", () => {
-                let winkelmandje = document.getElementById("winkelmandje");
-                let header = document.querySelector("header");
-
-                if (window.pageYOffset >= header.offsetHeight) {
-                    winkelmandje.classList.add("bewegenmandje");
-                } else {
-                    winkelmandje.classList.remove("bewegenmandje");
-                }
-            });
-
-        </script>
-        <section class="winkelmandje" id="winkelmandje">
-            <div class="bestellingsmandje"></div>
-        </section>
-
-    </div>
 </main>
-<script>
-    window.addEventListener("scroll", () => {
-        let balkmenu = document.getElementById("balkmenu");
-        let header = document.querySelector("header");
-
-        if (window.pageYOffset >= header.offsetHeight) {
-            balkmenu.classList.add("sticky");
-        } else {
-            balkmenu.classList.remove("sticky");
-        }
-    });
-
-</script>
-
 <?php
 include('footer.php')
 ?>

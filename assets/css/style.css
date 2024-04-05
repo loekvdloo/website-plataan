@@ -315,6 +315,9 @@ span.psw {
 }
 
 /*einde login*/
+/*sign up*/
+
+/*einde sign up*/
 /*nav balk menu*/
 .menupagina {
     height: 1500px;
@@ -390,7 +393,15 @@ span.psw {
     width: 65%;
     float: left;
 }
-
+.frietformulier1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    width: 65%;
+    position: relative;
+    left: 248px;
+}
 .frietgerechten {
     margin-top: 50px;
     background-color: gray;
@@ -427,7 +438,6 @@ span.psw {
     height: 100vw;
     display: flex;
     justify-content: end;
-    z-index: 999;
     transition: top 0.3s;
 }
 
@@ -444,7 +454,6 @@ span.psw {
     position: fixed;
     top: 50px;
     width: 100%;
-    z-index: 999;
 }
 
 .bestellingsmandje {

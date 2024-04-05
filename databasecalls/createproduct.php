@@ -13,3 +13,4 @@ $stmt->bindParam(':categorie', $_POST['categorie']);
 
 
 $stmt->execute();
+?>
