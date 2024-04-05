@@ -50,9 +50,7 @@ include('header.php')
                     } elseif ($key1 == 'Omschrijving') {
 
                         echo '<h4>' . $value2 . '</h4>';
-                    } elseif ($key1 == 'Id') {
-                        echo '<img src="assets/img/plus.png" onclick="fucntie(' . $value2 . ')" id="addorder' . $value2 . '">';
-                    } elseif ($key1 == 'Prijs') {
+                    }  elseif ($key1 == 'Prijs') {
 
                         echo '<h4 id="waarde">' . $value2 . '</h4>';
                     } elseif ($key1 == 'img') {
@@ -60,9 +58,8 @@ include('header.php')
                         echo '<img class="frietimg" src="' . $value2 . '"/>';
                     }
 
-
                 }
-
+                echo '<img src="assets/img/plus.png" onclick="winkelwagen(' . $value['Id'] . ')" id="addorder' . $value['Id'] . '">';
                 echo '</div>';
             }
 
@@ -87,6 +84,20 @@ include('header.php')
 
     </div>
 </main>
+<script>
+    window.addEventListener("scroll", () => {
+        let balkmenu = document.getElementById("balkmenu");
+        let header = document.querySelector("header");
+
+        if (window.pageYOffset >= header.offsetHeight) {
+            balkmenu.classList.add("sticky");
+        } else {
+            balkmenu.classList.remove("sticky");
+        }
+    });
+
+</script>
+
 <script>
     window.addEventListener("scroll", () => {
         let balkmenu = document.getElementById("balkmenu");

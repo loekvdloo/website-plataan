@@ -6,7 +6,7 @@
     <nav>
         <a href="menualgemeen.php">menu</a>
         <a href="bestellen.php">bestellen</a>
-        <a href="admin.php">over ons</a>
+        <a href="adminmenu.php">over ons</a>
         <button class="afwe" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login
         </button>
 
