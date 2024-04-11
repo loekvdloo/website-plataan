@@ -6,7 +6,7 @@
             <a target="_blank" href="https://www.instagram.com/deplataanmook/">@deplataanmook</a>
         </div>
         <div class="mediatekst">
-            <img src="assets/img/facebook(1).png" alt="facebook" class="media">
+            <img src="assets/img/facebook.png" alt="facebook" class="media">
             <a target="_blank" href="https://www.facebook.com/restariadeplataan.mook/?locale=nl_NL">@Restaria De Plataan
                 Mook</a>
         </div>

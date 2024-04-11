@@ -17,6 +17,8 @@ include('header.php')
     include('Connection.php');
 
 
+
+
     $sql = "SELECT * FROM producten WHERE categorie = 'friet' ";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
@@ -31,11 +33,11 @@ include('header.php')
         <a href="menuijs.php">Ijs & Shakes</a>
         <a href="menusauzen.php">Sauzen</a>
         <a href="menudranken.php">Dranken</a>
+        <a href="zoeken.php">zoeken</a>
         <a id="knopbestellen"> Jouw bestelling</a>
         <img src="assets/img/cart%201.png">
-
-
     </section>
+
     <div class="menu">
         <section class="frietformulier">
             <?php
@@ -56,13 +58,10 @@ include('header.php')
                     } elseif ($key1 == 'img') {
 
                         echo '<img class="frietimg" src="' . $value2 . '"/>';
-                    } elseif ($key1 == 'Id') {
-                        echo '<img src="assets/img/plus.png" onclick="fucntie(' . $value2 . ')" id="addorder' . $value2 . '">';
                     }
 
-
                 }
-
+                echo '<img class="snack" src="assets/img/plus.png" onclick="winkelwagen(' . $value['Id'] . ')" id="addorder' . $value['Id'] . '">';
                 echo '</div>';
             }
 

@@ -11,6 +11,12 @@ $stmt->bindParam(':Prijs', $_POST['Prijs']);
 $stmt->bindParam(':img', $_POST['img']);
 $stmt->bindParam(':categorie', $_POST['categorie']);
 
+$result = $stmt->execute();
 
-$stmt->execute();
+if($result){
+    header('location: ../index.php');
+}else{
+    echo 'hoi';
+}
+?>
 ?>

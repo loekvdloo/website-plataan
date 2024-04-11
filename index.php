@@ -6,11 +6,14 @@
     <title>plataan</title>
     <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
 </head>
+
+<body>
 <?php
 include('header.php')
 ?>
-
-<body>
+<?php
+//session_start();
+//?>
 <main>
     <section class="homepagina">
         <?php

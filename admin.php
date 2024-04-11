@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if ($_SESSION['rol'] == 'admin') {
+
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
@@ -12,6 +17,9 @@ include('header.php')
 
 <body>
 <main>
+    <div>
+        <a class="productverwijder" href="adminmenu.php">product verwijder</a>
+    </div>
     <section class="toevoegenkop">
         <h1>Product toevoegen</h1>
         <form class="toevoegen" action="databasecalls/createproduct.php" method="post">
@@ -57,6 +65,7 @@ include('header.php')
 
     echo '<section class="toevoegenkop">';
     echo '<h1>Product aanpassen</h1>';
+    echo '<div class="veranderen">';
     foreach ($result as $key => $value) {
         echo '<form class="toevoegen"  action="databasecalls/updateproduct.php" method="post">';
 
@@ -80,6 +89,7 @@ include('header.php')
         echo '<input type="submit" id="opslaantoevoegen" value="opslaan">';
         echo '</form>';
     }
+    echo '</div>';
     echo '</section>';
 
     ?>
@@ -89,3 +99,10 @@ include('footer.php')
 ?>
 </body>
 </html>
+<?php
+}else{
+header('location:index.php');
+}
+
+session_destroy();
+?>

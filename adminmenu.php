@@ -15,7 +15,7 @@ include('loginscherm.php')
 
 <body>
 <main>
-    <section class="frietformulier">
+    <section class="frietformulier2">
         <?php
         include('Connection.php');
 
@@ -46,14 +46,14 @@ include('loginscherm.php')
                 }
 
             }
-            echo '<input type="submit" value="verwijder">';
+            echo '<input type="submit" value="verwijder" class="verwijderknop">';
             echo '</form>';
             echo '</div>';
         }
 
         ?>
     </section>
-    <section class="frietformulier">
+    <section class="frietformulier2">
         <?php
         include('Connection.php');
 
@@ -63,7 +63,7 @@ include('loginscherm.php')
         $result = $stmt->fetchAll();
         foreach ($result as $key => $value) {
             echo '<div class="frietgerechten frietkeuzes' . $key . '">';
-
+            echo '<form action="databasecalls/removeproduct.php" method="post">';
             foreach ($value as $key1 => $value2) {
 
                 if ($key1 == 'Productnaam') {
@@ -72,9 +72,7 @@ include('loginscherm.php')
                 } elseif ($key1 == 'Omschrijving') {
 
                     echo '<h4>' . $value2 . '</h4>';
-                } elseif ($key1 == 'Id') {
-                    echo '<img src="assets/img/plus.png" onclick="fucntie(' . $value2 . ')" id="addorder' . $value2 . '">';
-                } elseif ($key1 == 'Prijs') {
+                }  elseif ($key1 == 'Prijs') {
 
                     echo '<h4 id="waarde">' . $value2 . '</h4>';
                 } elseif ($key1 == 'img') {
@@ -83,6 +81,8 @@ include('loginscherm.php')
                 }
 
             }
+            echo '<input type="submit" value="verwijder" class="verwijderknop">';
+            echo '</form>';
             echo '</div>';
         }
 

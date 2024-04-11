@@ -31,7 +31,7 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 60%;
+    width: 54%;
 
 }
 
@@ -341,12 +341,12 @@ span.psw {
 
 .balkmenu img {
     position: relative;
-    left: 575px;
+    left: 485px;
 }
 
 #knopbestellen {
     position: relative;
-    left: 565px;
+    left: 478px;
 }
 
 .balkmenu a:hover {
@@ -360,14 +360,16 @@ span.psw {
     width: 100%;
     z-index: 999;
 }
+
 /*einde menubalk*/
 /*vakken eten*/
-.menuimg{
+.menuimg {
     position: relative;
     left: 273.5px;
     top: -65.5px;
 }
-.bekijken{
+
+.bekijken {
     width: 67px;
     height: 30px;
     background-color: black;
@@ -376,6 +378,7 @@ span.psw {
     top: 39px;
     border-radius: 10px;
 }
+
 .bekijken a {
     color: white;
     font-size: 13px;
@@ -385,6 +388,7 @@ span.psw {
     position: relative;
     top: 6px;
 }
+
 .frietformulier {
     display: flex;
     flex-wrap: wrap;
@@ -393,6 +397,7 @@ span.psw {
     width: 65%;
     float: left;
 }
+
 .frietformulier1 {
     display: flex;
     flex-wrap: wrap;
@@ -402,6 +407,14 @@ span.psw {
     position: relative;
     left: 248px;
 }
+
+.frietformulier2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+
 .frietgerechten {
     margin-top: 50px;
     background-color: gray;
@@ -422,13 +435,45 @@ span.psw {
     top: 31px;
 }
 
-
+.snack {
+    position: relative;
+    top: -83px;
+    right: 91px;
+}
 
 .frietimg {
     position: relative;
     left: 273.5px;
     top: -72.5px;
 }
+
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#search-form {
+    display: flex;
+    justify-content: center;
+}
+
+#search {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#submit {
+    margin-top: 9px;
+    display: flex;
+    margin-bottom: 9px;
+    margin-left: 5px;
+}
+
 
 /*einde vakken eten*/
 /*winkelmandje*/
@@ -465,30 +510,54 @@ span.psw {
 
 /*einde winkelmandje*/
 /*admin pagina*/
-.toevoegenkop{
+.toevoegenkop {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.toevoegen{
+
+.toevoegen {
     display: flex;
     flex-direction: column;
 }
-#opslaantoevoegen{
+
+#opslaantoevoegen {
     width: 50px;
     display: flex;
     align-self: end;
 }
 
- #invultoevoeg{
-     display: flex;
+#invultoevoeg {
+    display: flex;
     width: 200px;
-     height: 30px;
-     border-radius: 10px;
+    height: 30px;
+    border-radius: 10px;
 }
- #teksttoevoegen{
-     padding-right: 20px;
- }
+
+#teksttoevoegen {
+    padding-right: 20px;
+}
+
+.verwijderknop {
+    position: relative;
+    top: -87px;
+    right: 96px;
+}
+
+.veranderen {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.productverwijder {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+}
+
 /*einde admin pagina*/
 /*hieronder staat alle code voor de footer. zo zorgt het er voor dat de socale media links staat met hun naam der achter en de openings tijden rechts*/
 footer {

@@ -31,10 +31,9 @@ include('header.php')
         <a href="menuijs.php">Ijs & Shakes</a>
         <a href="menusauzen.php">Sauzen</a>
         <a href="menudranken.php">Dranken</a>
+        <a href="zoeken.php">zoeken</a>
         <a id="knopbestellen"> Jouw bestelling</a>
         <img src="assets/img/cart%201.png">
-
-
     </section>
     <div class="menu">
         <section class="frietformulier">

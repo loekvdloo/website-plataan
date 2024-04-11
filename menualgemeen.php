@@ -16,13 +16,14 @@ include('header.php')
     <?php
     include('Connection.php');
 
-
     $sql = "SELECT * FROM mainproduct";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     $result = $stmt->fetchAll();
     ?>
+
         <section class="frietformulier1">
+
             <?php
             foreach ($result as $key => $value) {
                 echo '<div class="frietgerechten frietkeuzes' . $key . '">';

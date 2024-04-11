@@ -1,18 +1,21 @@
 <?php
 
-global $conn;
 include 'Connection.php';
 
-$user = $_GET['gebruikersnaam'];
-$pass = $_GET['wachtwoord'];
+$stmt = $conn->prepare("SELECT gebruikersnaam, wachtwoord, rol FROM users WHERE gebruikersnaam=:gebruikersnaam AND wachtwoord=:wachtwoord");
+$stmt->bindParam(':gebruikersnaam', $_POST['gebruikersnaam']);
+$stmt->bindParam(':wachtwoord', $_POST['wachtwoord']);
 
-$stmt = $conn->prepare("SELECT gebruikersnaam, wachtwoord FROM users WHERE gebruikersnaam='$user' AND wachtwoord='$pass'");
-$stmt->execute();
-$result = $stmt->fetchAll();
-var_dump($result);
-if(isset($result)){
-    echo 'klopt';
-}
-else{
+$result = $stmt->execute();
+//$stmt->fetchAll();
+
+$data = $stmt->fetch();
+
+if ($result) {
+   session_start();
+    $_SESSION['user'] = $data['gebruikersnaam'];
+    $_SESSION['rol'] = $data['rol'];
+    header('location:index.php');
+} else {
     echo 'niet';
 }
