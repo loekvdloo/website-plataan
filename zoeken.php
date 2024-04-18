@@ -39,7 +39,7 @@ include('header.php')
     ?>
     <form id="search-form" action="databasecalls/zoeken.php">
         <input id="search" name="search" type="text" placeholder="Type here">
-        <input id="submit" type="submit" value="Search">
+        <input id="submit" type="submit" value="zoeken">
     </form>
 
     <div id="search-results">
@@ -48,7 +48,7 @@ include('header.php')
 
     <script>
         // Voeg een event listener toe aan het zoekformulier
-        document.getElementById("search-form").addEventListener("submit", function(event) {
+        document.getElementById("search-form").addEventListener("submit", function (event) {
             event.preventDefault(); // Voorkom standaardgedrag van het formulier
 
             // Haal de zoekterm op uit het formulier
@@ -58,7 +58,7 @@ include('header.php')
             var xhr = new XMLHttpRequest();
             xhr.open("POST", "databasecalls/zoeken.php", true);
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-            xhr.onreadystatechange = function() {
+            xhr.onreadystatechange = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     // Toon de zoekresultaten in de zoekresultaten div
                     document.getElementById("search-results").innerHTML = xhr.responseText;

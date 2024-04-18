@@ -19,4 +19,3 @@ if($result){
     echo 'hoi';
 }
 ?>
-?>

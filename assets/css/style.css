@@ -339,11 +339,15 @@ span.psw {
     color: black;
 }
 
-.balkmenu img {
+#winkelmandjebankmenu {
     position: relative;
     left: 485px;
 }
 
+#zoekbalkmenu{
+    position: relative;
+    left: 5px;
+}
 #knopbestellen {
     position: relative;
     left: 478px;
@@ -368,7 +372,11 @@ span.psw {
     left: 273.5px;
     top: -65.5px;
 }
-
+.bestelmandjealles{
+    width: 331px;
+    height: 660px;
+    background-color: white;
+}
 .bekijken {
     width: 67px;
     height: 30px;
@@ -488,7 +496,7 @@ span.psw {
 
 .bestellingsmandje {
     width: 331px;
-    height: 660px;
+    height: 589px;
     background-color: white;
 }
 
@@ -501,11 +509,6 @@ span.psw {
     width: 100%;
 }
 
-.bestellingsmandje {
-    width: 331px;
-    height: 660px;
-    background-color: white;
-}
 
 
 /*einde winkelmandje*/

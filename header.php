@@ -7,7 +7,7 @@
     <nav>
         <a href="menualgemeen.php">menu</a>
         <a href="bestellen.php">bestellen</a>
-        <a href="test.php">over ons</a>
+        <a href="contact.php">contact</a>
         <a href="admin.php">admin</a>
         <button class="afwe" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login
         </button>

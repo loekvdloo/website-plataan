@@ -32,9 +32,11 @@ include('header.php')
         <a href="menusauzen.php">Sauzen</a>
         <a href="menudranken.php">Dranken</a>
         <a href="zoeken.php">zoeken</a>
+        <img alt="zoeken" id="zoekbalkmenu" src="assets/img/zoek.png">
         <a id="knopbestellen"> Jouw bestelling</a>
-        <img src="assets/img/cart%201.png">
+        <img alt="winkelmandje" id="winkelmandjebankmenu" src="assets/img/cart%201.png">
     </section>
+
     <div class="menu">
         <section class="frietformulier">
             <?php
@@ -44,26 +46,25 @@ include('header.php')
                 foreach ($value as $key1 => $value2) {
 
                     if ($key1 == 'Productnaam') {
-                        echo '<h2>' . $value2 . '</h2>';
+                        echo '<h2 id="naam' . $value['Id'] . '">' . $value2 . '</h2>';
 
                     } elseif ($key1 == 'Omschrijving') {
 
                         echo '<h4>' . $value2 . '</h4>';
-                    } elseif ($key1 == 'Id') {
-                        echo '<img src="assets/img/plus.png" onclick="fucntie(' . $value2 . ')" id="addorder' . $value2 . '">';
                     } elseif ($key1 == 'Prijs') {
 
-                        echo '<h4 id="waarde">' . $value2 . '</h4>';
+                        echo '<h4 id="waarde' . $value['Id'] . '">' . $value2 . '</h4>';
                     } elseif ($key1 == 'img') {
 
                         echo '<img class="frietimg" src="' . $value2 . '"/>';
                     }
 
-
                 }
-
+                echo '<img class="snack" src="assets/img/plus.png" onclick="winkelwagen(' . $value['Id'] . ')" id="addorder' . $value['Id'] . '">';
                 echo '</div>';
             }
+
+
 
             ?>
         </section>
@@ -81,8 +82,44 @@ include('header.php')
 
         </script>
         <section class="winkelmandje" id="winkelmandje">
-            <div class="bestellingsmandje"></div>
+            <div class="bestelmandjealles">
+                <div class="bestellingsmandje" id="bestelmandje"></div>
+                <div class="totaalprijs">Totaalprijs: <span id="totaalprijs">0.00</span></div>
+
+
+                <script>
+                    function winkelwagen(productId) {
+                        // Voeg het product toe aan het winkelmandje
+                        var productNaam = document.getElementById('naam' + productId).innerText;
+                        var productPrijs = parseFloat(document.getElementById('waarde' + productId).innerText);
+
+                        // Bereken de totaalprijs
+                        var totaalprijs = parseFloat(document.getElementById('totaalprijs').innerText);
+                        totaalprijs += productPrijs;
+
+                        // Maak een nieuw item aan voor het geselecteerde product
+                        var nieuwItem = '<div>' + productNaam+ '</div>';
+
+                        // Voeg het nieuwe item toe binnen de div "bestelmandje"
+                        var bestelmandje = document.getElementById('bestelmandje');
+                        bestelmandje.innerHTML += nieuwItem;
+
+                        // Update de totaalprijs binnen de div "bestelmandje"
+                        document.getElementById('totaalprijs').innerText = totaalprijs.toFixed(2);
+                    }
+
+
+
+                </script>
+
+            </div>
+
         </section>
+
+
+
+
+
 
     </div>
 </main>
